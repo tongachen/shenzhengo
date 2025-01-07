@@ -1,0 +1,132 @@
+{
+  "attractions": {
+    "去哪吃": [
+      {
+        "id": "food_001",
+        "name": "南京大牌档",
+        "location": "江苏省南京市秦淮区贡院街",
+        "description": "百年老字号，汇集南京特色小吃，包括鸭血粉丝汤、盐水鸭等传统美食。",
+        "image": "images/food/nanjing_dapaidang.jpg",
+        "category": "美食",
+        "rating": 4.5,
+        "tags": ["传统小吃", "本地特色", "老字号"]
+      },
+      {
+        "id": "food_002",
+        "name": "功德林素菜馆",
+        "location": "上海市黄浦区南京路534号",
+        "description": "百年素食老店，以淮扬菜系为主，以素食模仿荤菜闻名。",
+        "image": "images/food/gongdelin.jpg",
+        "category": "美食",
+        "rating": 4.4,
+        "tags": ["素食", "淮扬菜", "老字号"]
+      },
+      {
+        "id": "food_003",
+        "name": "外婆家",
+        "location": "浙江省杭州市西湖区黄龙时代广场",
+        "description": "知名杭帮菜连锁品牌，以东坡肉、龙井虾仁等特色菜品著称。",
+        "image": "images/food/waipojia.jpg",
+        "category": "美食",
+        "rating": 4.3,
+        "tags": ["杭帮菜", "家常菜", "连锁"]
+      }
+    ],
+    "去哪玩": [
+      {
+        "id": "entertainment_001",
+        "name": "欢乐谷",
+        "location": "北京市朝阳区东四环小武基北路",
+        "description": "大型主题乐园，拥有过山车等刺激项目和精彩的表演节目。",
+        "image": "images/entertainment/happy_valley.jpg",
+        "category": "娱乐",
+        "rating": 4.3,
+        "tags": ["主题乐园", "刺激", "家庭娱乐"]
+      },
+      {
+        "id": "entertainment_002",
+        "name": "迪士尼乐园",
+        "location": "上海市浦东新区川沙新镇",
+        "description": "中国大陆首个迪士尼主题乐园，融合中西方文化特色。",
+        "image": "images/entertainment/disney.jpg",
+        "category": "娱乐",
+        "rating": 4.7,
+        "tags": ["主题乐园", "亲子", "演出"]
+      },
+      {
+        "id": "entertainment_003",
+        "name": "方特梦幻王国",
+        "location": "安徽省芜湖市鸠江区",
+        "description": "大型高科技主题乐园，以科幻特效和互动体验为特色。",
+        "image": "images/entertainment/fantawild.jpg",
+        "category": "娱乐",
+        "rating": 4.2,
+        "tags": ["主题乐园", "科技", "互动"]
+      }
+    ],
+    "去哪跑": [
+      {
+        "id": "sports_001",
+        "name": "水立方",
+        "location": "北京市朝阳区天辰东路",
+        "description": "北京奥运会游泳馆，现为大众游泳健身场所，也举办各类水上运动赛事。",
+        "image": "images/sports/water_cube.jpg",
+        "category": "体育",
+        "rating": 4.6,
+        "tags": ["游泳", "健身", "奥运场馆"]
+      },
+      {
+        "id": "sports_002",
+        "name": "鸟巢体育场",
+        "location": "北京市朝阳区国家体育场南路",
+        "description": "2008年奥运会主会场，举办各类大型体育赛事和文艺演出。",
+        "image": "images/sports/birds_nest.jpg",
+        "category": "体育",
+        "rating": 4.8,
+        "tags": ["体育场", "奥运", "地标"]
+      },
+      {
+        "id": "sports_003",
+        "name": "深圳湾运动公园",
+        "location": "广东省深圳市南山区滨海大道",
+        "description": "集运动、休闲、观光于一体的海滨公园，设有跑道、球场等运动设施。",
+        "image": "images/sports/shenzhen_bay.jpg",
+        "category": "体育",
+        "rating": 4.5,
+        "tags": ["公园", "运动", "海滨"]
+      }
+    ],
+    "去哪逛": [
+      {
+        "id": "leisure_001",
+        "name": "西溪湿地",
+        "location": "浙江省杭州市西湖区天目山路",
+        "description": "城市中的天然氧吧，可以泛舟观鸟，体验江南水乡风情。",
+        "image": "images/leisure/xixi_wetland.jpg",
+        "category": "休闲",
+        "rating": 4.4,
+        "tags": ["自然", "观光", "亲子"]
+      },
+      {
+        "id": "leisure_002",
+        "name": "世茂深坑酒店",
+        "location": "上海市松江区佘山镇",
+        "description": "建在废弃采石场中的奢华酒店，独特的建筑设计和景观体验。",
+        "image": "images/leisure/shimao_quarry.jpg",
+        "category": "休闲",
+        "rating": 4.6,
+        "tags": ["酒店", "特色建筑", "奢华"]
+      },
+      {
+        "id": "leisure_003",
+        "name": "南锣鼓巷",
+        "location": "北京市东城区交道口南大街",
+        "description": "老北京胡同文化的代表，汇集特色小吃、文创店铺和老字号。",
+        "image": "images/leisure/nanluoguxiang.jpg",
+        "category": "休闲",
+        "rating": 4.2,
+        "tags": ["古街", "文化", "美食"]
+      }
+    ]
+  }
+} 
