@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.sqlite
+
+# Log files
+*.log
+
+# Images (optional, depending on whether you want to track images in git)
+# images/ 
