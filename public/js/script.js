@@ -1,7 +1,4 @@
 // 加载数据库
-let attractionsData = null;
-
-// 获取数据库内容
 async function loadDatabase() {
     try {
         const response = await fetch('/api/random-attractions');
@@ -19,18 +16,7 @@ async function loadDatabase() {
             return;
         }
 
-        // 添加category属性到每个景点对象
-        const processedAttractions = attractions.map(attraction => {
-            return {
-                ...attraction,
-                // 确保tags是数组
-                tags: typeof attraction.tags === 'string' ? 
-                      JSON.parse(attraction.tags) : attraction.tags
-            };
-        });
-
-        // 显示处理后的数据
-        displayCards(processedAttractions);
+        displayCards(attractions);
     } catch (error) {
         console.error('加载数据失败:', error);
         useMockData();
@@ -42,20 +28,15 @@ function displayCards(attractions) {
     const cardsContainer = document.querySelector('.cards-container');
     cardsContainer.innerHTML = '';
     
-    attractions.forEach(attraction => {
+    // 随机选择3张卡片
+    const randomAttractions = attractions
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+    
+    randomAttractions.forEach(attraction => {
         const card = createCard(attraction);
         cardsContainer.appendChild(card);
     });
-}
-
-// 添加刷新按钮事件
-function addRefreshButton() {
-    const header = document.querySelector('header');
-    const refreshButton = document.createElement('button');
-    refreshButton.textContent = '换一批';
-    refreshButton.className = 'refresh-btn';
-    refreshButton.onclick = loadDatabase;
-    header.appendChild(refreshButton);
 }
 
 // 创建卡片元素
@@ -64,8 +45,13 @@ function createCard(attraction) {
     card.className = 'card';
     
     // 解析JSON字符串的tags
-    const tags = typeof attraction.tags === 'string' ? JSON.parse(attraction.tags) : attraction.tags;
-    const tagsHtml = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+    const tags = typeof attraction.tags === 'string' ? 
+        JSON.parse(attraction.tags) : attraction.tags;
+    
+    // 使用两个空格分隔标签
+    const tagsHtml = tags.map(tag => 
+        `<span class="tag">${tag}</span>`
+    ).join('  ');  // 使用两个空格分隔
     
     // 添加类别标签
     const categoryLabel = {
@@ -77,15 +63,20 @@ function createCard(attraction) {
     
     card.innerHTML = `
         <div class="category-label">${categoryLabel[attraction.category]}</div>
-        <img src="${attraction.image_url}" alt="${attraction.name}" onerror="this.onerror=null; this.src='/images/default.jpg';">
+        <img src="${attraction.image_url}" alt="${attraction.name}" 
+            onerror="this.onerror=null; this.src='/images/default.jpg';">
         <div class="card-content">
             <h2>${attraction.name}</h2>
             <p class="location">${attraction.location}</p>
             <p class="description">${attraction.description}</p>
             <div class="tags">${tagsHtml}</div>
             <div class="card-actions">
-                <button class="like-btn" onclick="handleLike(${attraction.id}, '${attraction.category}')">👍 喜欢</button>
-                <button class="dislike-btn" onclick="handleDislike(${attraction.id}, '${attraction.category}')">👎 不喜欢</button>
+                <button class="like-btn" onclick="handleLike(${attraction.id}, '${attraction.category}')">
+                    👍 喜欢
+                </button>
+                <button class="dislike-btn" onclick="handleDislike(${attraction.id}, '${attraction.category}')">
+                    👎 不喜欢
+                </button>
             </div>
         </div>
     `;
@@ -99,13 +90,10 @@ function useMockData() {
     const mockData = [
         {
             id: 1,
-            category: 'where_to_eat',
-            name: '示例餐厅',
-            location: '深圳市南山区xx路xx号',
-            description: '这是一个示例餐厅描述',
-            image_url: '/images/default.jpg',
-            tags: ['美食', '餐厅', '示例'],
-            rating: 4.5
+            name: '示例景点',
+            location: '深圳市南山区',
+            description: '这是一个示例景点的描述',
+            image_url: '/images/default.jpg'
         },
         // 可以添加更多模拟数据...
     ];

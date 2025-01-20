@@ -170,7 +170,7 @@ INSERT INTO where_to_run (name, location, description, image_url, rating, tags) 
 
 ('打羽毛球 From 春茧体育馆', 
 '南山区滨海大道3001号', 
-'下班拎起球拍儿动起来', 
+'下班拎球拍儿', 
 'images/sports/Yu_Ma_Qiu.jpg',
 4.6, 
 '["羽毛球", "体育馆", "团建", "需预订"]'),
@@ -189,5 +189,5 @@ INSERT INTO where_to_shop (name, location, description, image_url, rating, tags)
 '深圳湾万象城打造的主题市集', 
 'images/shopping/Bay_Market_Cat.jpg',
 4.7, 
-'["巨物装置", "娱乐", "快闪", "100-200"]');
+'["巨物装置", "娱乐", "快闪", "公益性"]');
 
