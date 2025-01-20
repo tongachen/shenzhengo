@@ -22,6 +22,11 @@
 
 ---
 
+20250120版本
+1.推送至Github
+2.但是页面不显示内容了（绝望.jpg）
+3.cursor用光了fast request，但是不知道如何切换到slow request（绝望+1.jpg）
+
 ## 技术栈
 
 - **前端：**

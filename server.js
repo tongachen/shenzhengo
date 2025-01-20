@@ -54,6 +54,7 @@ db.on('error', (err) => {
 // 中间件配置
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname)));  // 添加根目录支持
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API路由
